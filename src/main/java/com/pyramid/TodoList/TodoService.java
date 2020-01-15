@@ -29,5 +29,9 @@ public void deleteTodo(String id){
     public Optional<List<Todo>> findAll(){
         return repo.findByIsCompleteFalse();
     }
+    public Optional<List<Todo>> findAllComplete(){
+    	System.out.println("complete service");
+    	return repo.findByIsCompleteTrue();
+    }
 
 }
